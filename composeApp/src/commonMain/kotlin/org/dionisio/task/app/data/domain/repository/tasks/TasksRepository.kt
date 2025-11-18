@@ -1,0 +1,24 @@
+package org.dionisio.task.app.data.domain.repository.tasks
+
+import org.dionisio.task.app.data.domain.model.Task
+import kotlinx.coroutines.flow.Flow
+
+interface TasksRepository {
+    fun getTasks(): Flow<List<Task>>
+    fun getTask(id: Int): Flow<Task?>
+    suspend fun addTask(task: Task)
+    fun getActiveTask(): Flow<Task?>
+
+    //suspend fun updateTask(task: Task)
+    suspend fun deleteTask(id: Int)
+    suspend fun deleteAllTasks()
+    suspend fun updateConsumedFocusTime(id: Int, focusTime: Long)
+    suspend fun updateConsumedShortBreakTime(id: Int, shortBreakTime: Long)
+    suspend fun updateConsumedLongBreakTime(id: Int, longBreakTime: Long)
+    suspend fun updateTaskInProgress(id: Int, inProgressTask: Boolean)
+    suspend fun updateTaskCompleted(id: Int, completed: Boolean)
+    suspend fun updateCurrentSessionName(id: Int, current: String)
+    suspend fun updateTaskCycleNumber(id: Int, cycle: Int)
+    suspend fun updateTaskActive(id: Int, active: Boolean)
+    suspend fun updateAllTasksActiveStatusToInactive()
+}

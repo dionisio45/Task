@@ -1,5 +1,6 @@
 package org.dionisio.task.app.data.presentation.component
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,6 +16,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import org.dionisio.task.app.feature.taskprogress.TimerState
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -28,7 +30,7 @@ fun BloomTimerControls(
     onClickAction: (state: TimerState) -> Unit,
 ) {
     Row(
-        modifier = modifier,
+        modifier = modifier.background(Color.Transparent),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceAround,
     ) {
@@ -37,7 +39,7 @@ fun BloomTimerControls(
                 modifier = Modifier.size(120.dp),
                 imageVector = Icons.Filled.Replay,
                 contentDescription = "Reset Timer",
-                tint = MaterialTheme.colorScheme.onPrimary,
+                tint = MaterialTheme.colorScheme.onBackground,
             )
         }
 
@@ -78,7 +80,7 @@ fun BloomTimerControls(
                 modifier = Modifier.size(120.dp),
                 imageVector = Icons.Filled.SkipNext,
                 contentDescription = "Next Timer",
-                tint = MaterialTheme.colorScheme.onPrimary,
+                tint = MaterialTheme.colorScheme.onBackground,
             )
         }
     }

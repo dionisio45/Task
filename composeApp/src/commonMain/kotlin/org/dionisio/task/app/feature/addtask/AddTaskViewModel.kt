@@ -18,6 +18,7 @@ import org.dionisio.task.app.data.domain.usecase.setting.SettingsUseCases
 import org.dionisio.task.app.data.domain.usecase.task.TaskUseCases
 import org.dionisio.task.app.utils.UiEvents
 import org.dionisio.task.app.utils.calculateFromFocusSessions
+import org.dionisio.task.app.utils.today
 
 class AddTaskViewModel(
     private val taskUseCases: TaskUseCases,
@@ -32,7 +33,7 @@ class AddTaskViewModel(
     init {
         viewModelScope.launch {
             settingsUseCases.getHourFormat().collectLatest { format ->
-                _state.update { it.copy(hourFormat = format?: 24) }
+                _state.update { it.copy(hourFormat = format ?: 24) }
             }
         }
         // Tiempo de sesión
@@ -57,17 +58,27 @@ class AddTaskViewModel(
         }
     }
 
-   fun onAction(action: AddTaskAction) {
+    fun onAction(action: AddTaskAction) {
         when (action) {
             is AddTaskAction.OnSetName -> _state.update { it.copy(name = action.name) }
             is AddTaskAction.OnSetDescription -> _state.update { it.copy(description = action.description) }
             is AddTaskAction.OnSetType -> _state.update { it.copy(type = action.type) }
             is AddTaskAction.OnSetDate -> _state.update { it.copy(taskDate = action.date) }
-            is AddTaskAction.OnSetStartTime -> _state.update { it.copy(startTime = action.time)}
+            is AddTaskAction.OnSetStartTime -> _state.update { it.copy(startTime = action.time) }
+            is AddTaskAction.OnSetEndTime -> _state.update { it.copy(endTime = action.time) }
             is AddTaskAction.OnSetFocusSessions -> _state.update { it.copy(focusSessions = action.sessions) }
-            is AddTaskAction.OnShowStartTimeInputDialog -> _state.update { it.copy(showStartTimeInputDialog = action.show) }
+            is AddTaskAction.OnShowStartTimeInputDialog -> _state.update {
+                it.copy(
+                    showStartTimeInputDialog = action.show
+                )
+            }
+
             is AddTaskAction.OnShowEndTimeDialog -> _state.update { it.copy(showEndTimeDialog = action.show) }
-            is AddTaskAction.OnTaskShowDatePickerDialog -> _state.update { it.copy(showTaskDatePickerDialog = action.show) }
+            is AddTaskAction.OnTaskShowDatePickerDialog -> _state.update {
+                it.copy(
+                    showTaskDatePickerDialog = action.show
+                )
+            }
 
             is AddTaskAction.OnIncrementSessions -> updateFocus(1)
             is AddTaskAction.OnDecrementSessions -> updateFocus(-1)
@@ -75,15 +86,14 @@ class AddTaskViewModel(
             is AddTaskAction.OnAddOrUpdateTask -> saveTask(action.task)
             is AddTaskAction.OnLoadTask -> loadTask(action.taskId)
             is AddTaskAction.OnReset -> reset()
-            else -> {}
         }
     }
 
-    fun showSnackbar(message: String) {
+   /* fun showSnackbar(message: String) {
         viewModelScope.launch {
             _events.send(UiEvents.ShowSnackbar(message))
         }
-    }
+    }*/
 
     private fun updateFocus(delta: Int) {
         val newValue = (_state.value.focusSessions + delta).coerceAtLeast(1)
@@ -102,42 +112,47 @@ class AddTaskViewModel(
         _state.update { it.copy(focusSessions = newValue, endTime = newEnd) }
     }
 
-    private fun loadTask(taskId: Int?) {
+     fun loadTask(taskId: Int?) {
         viewModelScope.launch {
             if (taskId == null) {
                 reset()
                 return@launch
             }
 
-            _state.update { it.copy(isLoading = true) }
-
             val loaded = taskUseCases.getTask(taskId).firstOrNull()
 
             if (loaded != null) {
-                _state.update {
-                    it.copy(
-                        id = loaded.id,
-                        name = loaded.name,
-                        description = loaded.description ?: "",
-                        type = taskTypes.firstOrNull { t -> t.name == loaded.type } ?: taskTypes.last(),
-                        startTime = loaded.start.time,
-                        taskDate = loaded.date,
-                        color = loaded.color,
-                        current = loaded.current,
-                        focusSessions = loaded.focusSessions,
-                        currentCycle = loaded.currentCycle,
-                        completed = loaded.completed,
-                        consumedFocusTime = loaded.consumedFocusTime,
-                        consumedShortBreakTime = loaded.consumedShortBreakTime,
-                        consumedLongBreakTime = loaded.consumedLongBreakTime,
-                        inProgressTask = loaded.inProgressTask,
-                        active = loaded.active,
-                        isLoading = false
-                    )
-                }
+                prefillFields(loaded)
             } else {
                 reset()
             }
+        }
+    }
+
+    private fun prefillFields(task: Task?) {
+        _state.update { current ->
+            current.copy(
+                id = task?.id,
+                name = task?.name ?: "",
+                description = task?.description ?: "",
+                type = taskTypes.firstOrNull { it.name == task?.type } ?: taskTypes.last(),
+                taskDate = task?.date ?: today(),
+                startTime = task?.start?.time ?: today().time,
+                focusSessions = task?.focusSessions ?: 1,
+                endTime = calculateFromFocusSessions(
+                    focusSessions = task?.focusSessions ?: 1,
+                    sessionTime = _state.value.sessionTime,
+                    shortBreakTime = _state.value.shortBreakTime,
+                    longBreakTime = _state.value.longBreakTime,
+                    currentLocalDateTime = LocalDateTime(
+                        year = task?.date?.year ?: today().year,
+                        month = task?.date?.month ?: today().month,
+                        day = task?.date?.day ?: today().day,
+                        hour = task?.start?.time?.hour ?: today().time.hour,
+                        minute = task?.start?.time?.minute ?: today().time.minute,
+                    )
+                )
+            )
         }
     }
 
@@ -184,6 +199,19 @@ class AddTaskViewModel(
     }
 
     private fun reset() {
-        _state.value = AddTaskState()
+        _state.update { s ->
+            s.copy(
+                focusSessions = 1,
+                name = "",
+                description = "",
+                type = taskTypes.last(),
+                taskDate = today(),
+                startTime = today().time,
+                showStartTimeInputDialog = false,
+                showEndTimeDialog = false,
+                showTaskDatePickerDialog = false
+            )
+        }
     }
+
 }

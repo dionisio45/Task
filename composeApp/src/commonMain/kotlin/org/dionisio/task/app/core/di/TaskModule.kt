@@ -20,6 +20,7 @@ import org.dionisio.task.app.data.domain.usecase.task.UpdateTaskCycleNumber
 import org.dionisio.task.app.data.domain.usecase.task.UpdateTaskInProgress
 import org.dionisio.task.app.feature.addtask.AddTaskViewModel
 import org.dionisio.task.app.feature.home.HomeViewModel
+import org.dionisio.task.app.feature.taskprogress.TaskProgressViewModel
 import org.koin.core.module.dsl.singleOf
 import org.koin.core.module.dsl.viewModel
 import org.koin.core.module.dsl.viewModelOf
@@ -64,6 +65,12 @@ val TaskModule  = module{
     }
     viewModel {
         AddTaskViewModel(
+            taskUseCases = get(),
+            settingsUseCases = get()
+        )
+    }
+    viewModel {
+        TaskProgressViewModel(
             taskUseCases = get(),
             settingsUseCases = get()
         )

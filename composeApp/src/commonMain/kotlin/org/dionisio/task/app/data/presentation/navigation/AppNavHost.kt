@@ -13,6 +13,8 @@ import org.dionisio.task.app.feature.home.HomeScreenRoot
 import org.dionisio.task.app.feature.home.HomeViewModel
 import org.dionisio.task.app.feature.settings.SettingsScreenRoot
 import org.dionisio.task.app.feature.settings.SettingsViewModel
+import org.dionisio.task.app.feature.taskprogress.TaskProgressScreenRoot
+import org.dionisio.task.app.feature.taskprogress.TaskProgressViewModel
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -86,12 +88,14 @@ fun AppNavHost(
             )
         }
 
-       /* composable<Destinations.TaskProgress> { backStackEntry ->
+        composable<Destinations.TaskProgress> { backStackEntry ->
             val taskProgress: Destinations.TaskProgress = backStackEntry.toRoute()
-            TaskProgressScreen(
+            val viewModel: TaskProgressViewModel = koinViewModel()
+            TaskProgressScreenRoot(
                 taskId = taskProgress.taskId,
-                navController = navController
+                navController = navController,
+                viewModel = viewModel,
             )
-        }*/
+        }
     }
 }

@@ -15,7 +15,8 @@ data class AddTaskState(
     val type: TaskType = taskTypes.last(),
     val taskDate: LocalDateTime = today(),
     val startTime: LocalTime = today().time,
-    val endTime: LocalTime = today().time,
+    val endTime: LocalTime = today().time ,
+    //val endTime: LocalTime? = null,
     val color: Long = 0xFF4CAF50,
     val current: String = "session",
     val focusSessions: Int = 1,
@@ -35,5 +36,4 @@ data class AddTaskState(
     val sessionTime: Int = 25,
     val shortBreakTime: Int = 5,
     val longBreakTime: Int = 15,
-
 )

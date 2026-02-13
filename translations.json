@@ -1,0 +1,735 @@
+{
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "it": "Italiano"
+  },
+  "strings": {
+    "physical_properties": {
+      "en": "Physical Properties",
+      "es": "Propiedades físicas",
+      "fr": "Propriétés physiques",
+      "de": "Physikalische Eigenschaften",
+      "pt": "Propriedades físicas",
+      "it": "Proprietà fisiche"
+    },
+    "appearance": {
+      "en": "Appearance",
+      "es": "Apariencia",
+      "fr": "Apparence",
+      "de": "Aussehen",
+      "pt": "Aparência",
+      "it": "Aspetto"
+    },
+    "color": {
+      "en": "Color",
+      "es": "Color",
+      "fr": "Couleur",
+      "de": "Farbe",
+      "pt": "Cor",
+      "it": "Colore"
+    },
+    "density": {
+      "en": "Density",
+      "es": "Densidad",
+      "fr": "Densité",
+      "de": "Dichte",
+      "pt": "Densidade",
+      "it": "Densità"
+    },
+    "atomic_mass": {
+      "en": "Atomic Mass",
+      "es": "Masa Atómica",
+      "fr": "Masse Atomique",
+      "de": "Atommasse",
+      "pt": "Massa Atômica",
+      "it": "Massa Atomica"
+    },
+
+    "thermal_properties": {
+      "en": "Thermal Properties",
+      "es": "Propiedades térmicas",
+      "fr": "Propriétés thermiques",
+      "de": "Thermische Eigenschaften",
+      "pt": "Propriedades térmicas",
+      "it": "Proprietà termiche"
+    },
+    "melting_point": {
+      "en": "Melting Point",
+      "es": "Punto de fusión",
+      "fr": "Point de fusion",
+      "de": "Schmelzpunkt",
+      "pt": "Ponto de fusão",
+      "it": "Punto di fusione"
+    },
+    "boiling_point": {
+      "en": "Boiling Point",
+      "es": "Punto de ebullición",
+      "fr": "Point d'ébullition",
+      "de": "Siedepunkt",
+      "pt": "Ponto de ebulição",
+      "it": "Punto di ebollizione"
+    },
+    "critical_temperature": {
+      "en": "Critical Temperature",
+      "es": "Temperatura crítica",
+      "fr": "Température critique",
+      "de": "Kritische Temperatur",
+      "pt": "Temperatura crítica",
+      "it": "Temperatura critica"
+    },
+    "critical_pressure": {
+      "en": "Critical Pressure",
+      "es": "Presión crítica",
+      "fr": "Pression critique",
+      "de": "Kritischer Druck",
+      "pt": "Pressão crítica",
+      "it": "Pressione critica"
+    },
+    "specific_heat": {
+      "en": "Specific Heat",
+      "es": "Calor específico",
+      "fr": "Chaleur spécifique",
+      "de": "Spezifische Wärme",
+      "pt": "Calor específico",
+      "it": "Calore specifico"
+    },
+    "molar_heat": {
+      "en": "Molar Heat",
+      "es": "Capacidad calorífica molar",
+      "fr": "Chaleur molaire",
+      "de": "Molwärme",
+      "pt": "Calor molar",
+      "it": "Calore molare"
+    },
+    "thermal_conductivity": {
+      "en": "Thermal Conductivity",
+      "es": "Conductividad térmica",
+      "fr": "Conductivité thermique",
+      "de": "Wärmeleitfähigkeit",
+      "pt": "Condutividade térmica",
+      "it": "Conducibilità termica"
+    },
+    "heat_of_fusion": {
+      "en": "Heat of Fusion",
+      "es": "Calor de fusión",
+      "fr": "Chaleur de fusion",
+      "de": "Schmelzwärme",
+      "pt": "Calor de fusão",
+      "it": "Calore di fusione"
+    },
+    "heat_of_vaporization": {
+      "en": "Heat of Vaporization",
+      "es": "Calor de vaporización",
+      "fr": "Chaleur de vaporisation",
+      "de": "Verdampfungswärme",
+      "pt": "Calor de vaporização",
+      "it": "Calore di vaporizzazione"
+    },
+
+    "electron_configuration": {
+      "en": "Electron Configuration",
+      "es": "Configuración electrónica",
+      "fr": "Configuration électronique",
+      "de": "Elektronenkonfiguration",
+      "pt": "Configuração eletrônica",
+      "it": "Configurazione elettronica"
+    },
+    "electron_configuration_label": {
+      "en": "Configuration",
+      "es": "Configuración",
+      "fr": "Configuration",
+      "de": "Konfiguration",
+      "pt": "Configuração",
+      "it": "Configurazione"
+    },
+    "shell_distribution": {
+      "en": "Shell Distribution",
+      "es": "Distribución de capas",
+      "fr": "Distribution des couches",
+      "de": "Schalenverteilung",
+      "pt": "Distribuição de camadas",
+      "it": "Distribuzione dei gusci"
+    },
+    "valence_electrons": {
+      "en": "Valence Electrons",
+      "es": "Electrones de valencia",
+      "fr": "Électrons de valence",
+      "de": "Valenzelektronen",
+      "pt": "Elétrons de valência",
+      "it": "Elettroni di valenza"
+    },
+
+    "atomic_properties": {
+      "en": "Atomic Properties",
+      "es": "Propiedades atómicas",
+      "fr": "Propriétés atomiques",
+      "de": "Atomare Eigenschaften",
+      "pt": "Propriedades atômicas",
+      "it": "Proprietà atomiche"
+    },
+    "atomic_radius": {
+      "en": "Atomic Radius",
+      "es": "Radio atómico",
+      "fr": "Rayon atomique",
+      "de": "Atomradius",
+      "pt": "Raio atômico",
+      "it": "Raggio atomico"
+    },
+    "covalent_radius": {
+      "en": "Covalent Radius",
+      "es": "Radio covalente",
+      "fr": "Rayon covalent",
+      "de": "Kovalenzradius",
+      "pt": "Raio covalente",
+      "it": "Raggio covalente"
+    },
+    "van_der_waals_radius": {
+      "en": "Van der Waals Radius",
+      "es": "Radio de Van der Waals",
+      "fr": "Rayon de Van der Waals",
+      "de": "Van-der-Waals-Radius",
+      "pt": "Raio de Van der Waals",
+      "it": "Raggio di Van der Waals"
+    },
+    "electronegativity": {
+      "en": "Electronegativity",
+      "es": "Electronegatividad",
+      "fr": "Électronégativité",
+      "de": "Elektronegativität",
+      "pt": "Eletropositividade",
+      "it": "Elettronegatività"
+    },
+    "electron_affinity": {
+      "en": "Electron Affinity",
+      "es": "Afinidad electrónica",
+      "fr": "Affinité électronique",
+      "de": "Elektronenaffinität",
+      "pt": "Afinidade eletrônica",
+      "it": "Affinità elettronica"
+    },
+    "ionization_energy": {
+      "en": "Ionization Energy",
+      "es": "Energía de ionización",
+      "fr": "Énergie d'ionisation",
+      "de": "Ionisierungsenergie",
+      "pt": "Energia de ionização",
+      "it": "Energia di ionizzazione"
+    },
+
+    "gas_properties": {
+      "en": "Gas Properties",
+      "es": "Propiedades del gas",
+      "fr": "Propriétés des gaz",
+      "de": "Gaseigenschaften",
+      "pt": "Propriedades do gás",
+      "it": "Proprietà del gas"
+    },
+    "molecular_form": {
+      "en": "Molecular Form",
+      "es": "Forma molecular",
+      "fr": "Forme moléculaire",
+      "de": "Molekülform",
+      "pt": "Forma molecular",
+      "it": "Forma molecolare"
+    },
+    "bonding_type": {
+      "en": "Bonding Type",
+      "es": "Tipo de enlace",
+      "fr": "Type de liaison",
+      "de": "Bindungstyp",
+      "pt": "Tipo de ligação",
+      "it": "Tipo di legame"
+    },
+    "is_diatomic": {
+      "en": "Diatomic",
+      "es": "Diátono",
+      "fr": "Diatomique",
+      "de": "Diatomisch",
+      "pt": "Diatômico",
+      "it": "Diatomico"
+    },
+    "molar_mass": {
+      "en": "Molar Mass",
+      "es": "Masa molar",
+      "fr": "Masse molaire",
+      "de": "Molmasse",
+      "pt": "Massa molar",
+      "it": "Massa molare"
+    },
+
+    "advanced_properties": {
+      "en": "Advanced Properties",
+      "es": "Propiedades avanzadas",
+      "fr": "Propriétés avancées",
+      "de": "Erweiterte Eigenschaften",
+      "pt": "Propriedades avançadas",
+      "it": "Proprietà avanzate"
+    },
+    "neutron_cross_section": {
+      "en": "Neutron Cross Section",
+      "es": "Sección transversal de neutrones",
+      "fr": "Section efficace neutronique",
+      "de": "Neutronenwirkungsquerschnitt",
+      "pt": "Seção de choque de nêutrons",
+      "it": "Sezione d'urto neutronica"
+    },
+    "neutron_mass_absorption": {
+      "en": "Neutron Mass Absorption",
+      "es": "Absorción de masa de neutrones",
+      "fr": "Absorption de masse neutronique",
+      "de": "Neutronenmasseabsorption",
+      "pt": "Absorção de massa de nêutrons",
+      "it": "Assorbimento di massa neutronica"
+    },
+    "refractive_index": {
+      "en": "Refractive Index",
+      "es": "Índice de refracción",
+      "fr": "Indice de réfraction",
+      "de": "Brechungsindex",
+      "pt": "Índice de refração",
+      "it": "Indice di rifrazione"
+    },
+    "speed_of_sound": {
+      "en": "Speed of Sound",
+      "es": "Velocidad del sonido",
+      "fr": "Vitesse du son",
+      "de": "Schallgeschwindigkeit",
+      "pt": "Velocidade do som",
+      "it": "Velocità del suono"
+    },
+    "molar_volume": {
+      "en": "Molar Volume",
+      "es": "Volumen molar",
+      "fr": "Volume molaire",
+      "de": "Molvolumen",
+      "pt": "Volume molar",
+      "it": "Volume molare"
+    },
+
+    "abundance": {
+      "en": "Abundance",
+      "es": "Abundancia",
+      "fr": "Abondance",
+      "de": "Häufigkeit",
+      "pt": "Abundância",
+      "it": "Abbastanza"
+    },
+    "abundance_universe": {
+      "en": "Universe",
+      "es": "Universo",
+      "fr": "Univers",
+      "de": "Universum",
+      "pt": "Universo",
+      "it": "Universo"
+    },
+    "abundance_sun": {
+      "en": "Sun",
+      "es": "Sol",
+      "fr": "Soleil",
+      "de": "Sonne",
+      "pt": "Sol",
+      "it": "Sole"
+    },
+    "abundance_crust": {
+      "en": "Earth Crust",
+      "es": "Corteza terrestre",
+      "fr": "Croûte terrestre",
+      "de": "Erdkruste",
+      "pt": "Crosta terrestre",
+      "it": "Crosta terrestre"
+    },
+    "abundance_oceans": {
+      "en": "Oceans",
+      "es": "Océanos",
+      "fr": "Océans",
+      "de": "Ozeane",
+      "pt": "Oceanos",
+      "it": "Oceani"
+    },
+    "abundance_humans": {
+      "en": "Humans",
+      "es": "Humanos",
+      "fr": "Humains",
+      "de": "Menschen",
+      "pt": "Humanos",
+      "it": "Umani"
+    },
+    "abundance_meteorites": {
+      "en": "Meteorites",
+      "es": "Meteoritos",
+      "fr": "Météorites",
+      "de": "Meteorit",
+      "pt": "Meteoritos",
+      "it": "Meteoriti"
+    },
+
+    "history": {
+      "en": "History",
+      "es": "Historia",
+      "fr": "Histoire",
+      "de": "Geschichte",
+      "pt": "História",
+      "it": "Storia"
+    },
+    "discovered_by": {
+      "en": "Discovered by",
+      "es": "Descubierto por",
+      "fr": "Découvert par",
+      "de": "Entdeckt von",
+      "pt": "Descoberto por",
+      "it": "Scoperto da"
+    },
+    "named_by": {
+      "en": "Named by",
+      "es": "Nombrado por",
+      "fr": "Nommé par",
+      "de": "Benannt von",
+      "pt": "Nomeado por",
+      "it": "Nominato da"
+    },
+
+    "wikipedia_article": {
+      "en": "Full Article on Wikipedia",
+      "es": "Artículo completo en Wikipedia",
+      "fr": "Article complet sur Wikipédia",
+      "de": "Vollständiger Artikel auf Wikipedia",
+      "pt": "Artigo completo na Wikipédia",
+      "it": "Articolo completo su Wikipedia"
+    },
+    "previous": {
+      "en": "Previous",
+      "es": "Anterior",
+      "fr": "Précédent",
+      "de": "Vorherige",
+      "pt": "Anterior",
+      "it": "Precedente"
+    },
+    "next": {
+      "en": "Next",
+      "es": "Siguiente",
+      "fr": "Suivant",
+      "de": "Nächste",
+      "pt": "Próximo",
+      "it": "Successivo"
+    },
+    "periodic_table": {
+      "en": "Periodic Table",
+      "es": "Tabla periódica",
+      "fr": "Tableau périodique",
+      "de": "Periodensystem",
+      "pt": "Tabela periódica",
+      "it": "Tavola periodica"
+    },
+    "menu_puzzles": {
+      "en": "Puzzles",
+      "es": "Puzzles",
+      "fr": "Puzzles",
+      "de": "Puzzles",
+      "pt": "Puzzles",
+      "it": "Puzzles"
+    },
+    "menu_flashcards": {
+      "en": "Flashcards",
+      "es": "Tarjetas",
+      "fr": "Cartes mémoire",
+      "de": "Lernkarten",
+      "pt": "Flashcards",
+      "it": "Schede"
+    },
+    "menu_more": {
+      "en": "More",
+      "es": "Más",
+      "fr": "Plus",
+      "de": "Mehr",
+      "pt": "Mais",
+      "it": "Altro"
+    },
+    "menu_calculators": {
+      "en": "Calculators",
+      "es": "Calculadoras",
+      "fr": "Calculatrices",
+      "de": "Rechner",
+      "pt": "Calculadoras",
+      "it": "Calcolatrici"
+    },
+    "menu_settings": {
+      "en": "Settings",
+      "es": "Configuración",
+      "fr": "Paramètres",
+      "de": "Einstellungen",
+      "pt": "Configurações",
+      "it": "Impostazioni"
+    },
+    "settings_appearance": {
+      "en": "Appearance",
+      "es": "Apariencia",
+      "fr": "Apparence",
+      "de": "Erscheinungsbild",
+      "pt": "Aparência",
+      "it": "Aspetto"
+    },
+    "settings_theme": {
+      "en": "Theme",
+      "es": "Tema",
+      "fr": "Thème",
+      "de": "Design",
+      "pt": "Tema",
+      "it": "Tema"
+    },
+    "settings_language": {
+      "en": "Language",
+      "es": "Idioma",
+      "fr": "Langue",
+      "de": "Sprache",
+      "pt": "Idioma",
+      "it": "Lingua"
+    },
+    "loading": {
+      "en": "Loading...",
+      "es": "Cargando...",
+      "fr": "Chargement...",
+      "de": "Laden...",
+      "pt": "Carregando...",
+      "it": "Caricamento..."
+    },
+
+    "physical_state": {
+      "en": "Physical State",
+      "es": "Estado físico",
+      "fr": "État physique",
+      "de": "Physikalischer Zustand",
+      "pt": "Estado físico",
+      "it": "Stato fisico"
+    },
+    "state_solid": {
+      "en": "Solid",
+      "es": "Sólido",
+      "fr": "Solide",
+      "de": "Fest",
+      "pt": "Sólido",
+      "it": "Solido"
+    },
+    "state_liquid": {
+      "en": "Liquid",
+      "es": "Líquido",
+      "fr": "Liquide",
+      "de": "Flüssig",
+      "pt": "Líquido",
+      "it": "Liquido"
+    },
+    "state_gas": {
+      "en": "Gas",
+      "es": "Gas",
+      "fr": "Gaz",
+      "de": "Gas",
+      "pt": "Gás",
+      "it": "Gas"
+    },
+    "state_unknown": {
+      "en": "Unknown",
+      "es": "Desconocido",
+      "fr": "Inconnu",
+      "de": "Unbekannt",
+      "pt": "Desconhecido",
+      "it": "Sconosciuto"
+    },
+
+
+    "chemical_classification": {
+      "en": "Chemical Classification",
+      "es": "Clasificación química",
+      "fr": "Classification chimique",
+      "de": "Chemische Klassifikation",
+      "pt": "Classificação química",
+      "it": "Classificazione chimica"
+    },
+    "close": {
+      "en": "Close",
+      "es": "Cerrar",
+      "fr": "Fermer",
+      "de": "Schließen",
+      "pt": "Fechar",
+      "it": "Chiudi"
+    },
+
+    "group_alkali_metals": {
+      "en": "Alkali metals",
+      "es": "Metales alcalinos",
+      "fr": "Métaux alcalins",
+      "de": "Alkalimetalle",
+      "pt": "Metais alcalinos",
+      "it": "Metalli alcalini"
+    },
+    "group_alkaline_earth_metals": {
+      "en": "Alkaline earth metals",
+      "es": "Alcalinotérreos",
+      "fr": "Métaux alcalino-terreux",
+      "de": "Erdalkalimetalle",
+      "pt": "Metais alcalino-terrosos",
+      "it": "Metalli alcalino-terrosi"
+    },
+    "group_transition_metals": {
+      "en": "Transition metals",
+      "es": "Metales de transición",
+      "fr": "Métaux de transition",
+      "de": "Übergangsmetalle",
+      "pt": "Metais de transição",
+      "it": "Metalli di transizione"
+    },
+    "group_post_transition_metals": {
+      "en": "Post-transition metals",
+      "es": "Metales post-transición",
+      "fr": "Métaux post-transition",
+      "de": "Post-Übergangsmetalle",
+      "pt": "Metais pós-transição",
+      "it": "Metalli post-transizione"
+    },
+    "group_metalloid": {
+      "en": "Metalloid",
+      "es": "Metaloide",
+      "fr": "Métalloïde",
+      "de": "Metalloid",
+      "pt": "Metalóide",
+      "it": "Metalloide"
+    },
+    "group_non_metals": {
+      "en": "Non-metals",
+      "es": "No metales",
+      "fr": "Non-métaux",
+      "de": "Nichtmetalle",
+      "pt": "Não metais",
+      "it": "Non metalli"
+    },
+    "group_other_non_metals": {
+      "en": "Other non-metals",
+      "es": "Otros no metales",
+      "fr": "Autres non-métaux",
+      "de": "Andere Nichtmetalle",
+      "pt": "Outros não metais",
+      "it": "Altri non metalli"
+    },
+    "group_noble_gases": {
+      "en": "Noble gases",
+      "es": "Gases nobles",
+      "fr": "Gaz nobles",
+      "de": "Edelgase",
+      "pt": "Gases nobres",
+      "it": "Gas nobili"
+    },
+    "group_lanthanides": {
+      "en": "Lanthanides",
+      "es": "Lantánidos",
+      "fr": "Lanthanides",
+      "de": "Lanthanide",
+      "pt": "Lantanídeos",
+      "it": "Lantanidi"
+    },
+    "group_actinides": {
+      "en": "Actinides",
+      "es": "Actínidos",
+      "fr": "Actinides",
+      "de": "Actinide",
+      "pt": "Actinídeos",
+      "it": "Attinidi"
+    },
+
+    "important_groups": {
+      "en": "Important groups",
+      "es": "Grupos importantes",
+      "fr": "Groupes importants",
+      "de": "Wichtige Gruppen",
+      "pt": "Grupos importantes",
+      "it": "Gruppi importanti"
+    },
+    "group_halogens": {
+      "en": "Halogens",
+      "es": "Halógenos",
+      "fr": "Halogènes",
+      "de": "Halogene",
+      "pt": "Halogênios",
+      "it": "Alogeni"
+    },
+    "group_chalcogens": {
+      "en": "Chalcogens",
+      "es": "Anfígenos",
+      "fr": "Chalcogènes",
+      "de": "Chalkogene",
+      "pt": "Calcogênios",
+      "it": "Calcogeni"
+    },
+    "group_pnictogens": {
+      "en": "Pnictogens",
+      "es": "Pnictógenos",
+      "fr": "Pnictogènes",
+      "de": "Pnictogene",
+      "pt": "Pnictogênios",
+      "it": "Pnictogeni"
+    },
+
+    "general_type": {
+      "en": "General type",
+      "es": "Tipo general",
+      "fr": "Type général",
+      "de": "Allgemeiner Typ",
+      "pt": "Tipo geral",
+      "it": "Tipo generale"
+    },
+    "type_metal": {
+      "en": "Metal",
+      "es": "Metal",
+      "fr": "Métal",
+      "de": "Metall",
+      "pt": "Metal",
+      "it": "Metallo"
+    },
+    "type_metalloid": {
+      "en": "Metalloid",
+      "es": "Metaloide",
+      "fr": "Métalloïde",
+      "de": "Metalloid",
+      "pt": "Metalóide",
+      "it": "Metalloide"
+    },
+    "type_non_metal": {
+      "en": "Non-metal",
+      "es": "No metal",
+      "fr": "Non-métal",
+      "de": "Nichtmetall",
+      "pt": "Não metal",
+      "it": "Non metallo"
+    },
+
+    "chemical_calculators": {
+      "en": "Chemical Calculators",
+      "es": "Calculadoras Químicas",
+      "fr": "Calculatrices chimiques",
+      "de": "Chemische Rechner",
+      "pt": "Calculadoras Químicas",
+      "it": "Calcolatrici chimiche"
+    },
+
+    "wrong_position_title": {
+      "en": "That is not the correct position",
+      "es": "Esa no es la posición correcta",
+      "fr": "Ce n'est pas la bonne position",
+      "de": "Das ist nicht die richtige Position",
+      "pt": "Essa não é a posição correta",
+      "it": "Questa non è la posizione corretta"
+    },
+
+    "correct_element_hint": {
+      "en": "This position belongs to:",
+      "es": "Esta casilla pertenece a:",
+      "fr": "Cette case correspond à :",
+      "de": "Diese Position gehört zu:",
+      "pt": "Esta posição pertence a:",
+      "it": "Questa posizione appartiene a:"
+    }
+
+
+  }
+}
